@@ -1,26 +1,22 @@
-body{
-  background-color: black;
-}
-
-.content{
-  color: white;
-  font-size: 2em;
-}
-.heading{
-  color: white;
-  font-size: 7em;
-}
-
-.center {
-    margin: auto;
-    width: 50% ;
-    padding: 10px;
-    text-align: center;
-    font-family: "robot" sans-serif;
-
-}
 
 
+#main{  margin: auto;  width: 50%;
+   /*border: 3px solid green;*/
+   padding: 10px;
+   }/*text formatting*/
+   .center {
+       margin: auto;
+          /*width: 50%;*/
+            padding: 10px;}
+    .heading{  font-size: 7em;
+        font-family: 'roboto'sans-serif;
+         color:white;}
+
+    .content{
+      font-size: 2em;
+        font-family: sans-serif;
+         color:white;}/*background designing*/
+         body{  background-color:black;}
 
 input[type=text], input[type=password] {
     width: 100%;

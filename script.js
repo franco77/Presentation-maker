@@ -21,7 +21,7 @@ let saveSlide = function() {
   let content = document.getElementById('new-content').value;
   document.getElementById('slide-form').reset();
   document.getElementById('id01').style.display = 'none';
-  let slide = '<div id=\'main\'><div class=\'center\' id=\'slide\'><p class=\'heading\'>' + heading + '</p><p class=\'content\'>' + content + '</p></div></div>';
+  let slide = '<style media="screen">body{}.heading{}.content{}</style><div id=\'main\'><div class=\'center\' id=\'slide\'><p class=\'heading\'>' + heading + '</p><p class=\'content\'>' + content + '</p></div></div>';
   slides.push(slide);
   slideNumber = slides.length - 1;
   displaySlide();

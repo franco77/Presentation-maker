@@ -14,5 +14,29 @@
       <button type="button" onclick="removeSlide()" name="button">Remove Slide</button>
       <button type="button" onclick="download()" name="button">Download Presentation</button>
     </div>
+    <div class="center" id="slides">
+    </div>
+    </div>
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+      <form class="modal-content animate" action="/" id="slide-form">
+        <div class="container">
+          <label><b>Heading</b></label>
+          <input type="text" placeholder="Enter Heading" id="new-heading" required>
+
+          <label><b>Content</b></label>
+          <input type="text" placeholder="Enter Content" id="new-content" required>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" class="signupbtn" onclick="saveSlide()">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
   </body>
+  <script type="text/javascript">
+    displaySlide();
+  </script>
 </html>

@@ -28,7 +28,7 @@ let saveSlide = function() {
 };
 
 let nextSlide = function() {
-  console.log(slides.length, slideNumber);
+
   if (slideNumber + 1 < slides.length) {
     slideNumber++;
     displaySlide();
@@ -81,25 +81,12 @@ let download = function() {
     document.getElementById(\'slides\').innerHTML=slides[slideNumber];\n\
   }\n\
  ' + 'displaySlide()</script> </html>';
-  //     var text = html;
-  //     var name = prompt('Enter the file name');
-  //     if(name != null && name !=''){
-  //     name = name + ".html";
-  //     }else{
-  //     alert("please enter the file name to save file");
-  //     return;
-  //   }
-  // var a = document.getElementById("a");
-  // var file = new Blob([text], {type: "text/html"});
-  // a.href = URL.createObjectURL(file);
-  // console.log(a.href);
-  // a.download = name;
-  // document.getElementById('a').click();
+
   var zip = new JSZip();
   zip.file('index.html', html);
   zip.generateAsync({type: 'blob'})
   .then(function(content) {
-    saveAs(content, 'example.zip');
+    saveAs(content, 'presentation.zip');
   });
 };
 
@@ -108,8 +95,8 @@ let removeSlide = function() {
   slideNumber = slides.length - 1;
   displaySlide();
 };
+
 let prevSlide = function() {
-  console.log(slides.length, slideNumber);
   if (slideNumber - 1 >= 0) {
     slideNumber--;
     displaySlide();

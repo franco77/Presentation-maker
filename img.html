@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jsZip.js" charset="utf-8"></script>
+    <title>Image zipping</title>
+    <script type="text/javascript">
+    var zip = new JSZip();
+zip.file("Hello.txt", "Hello World\n");
+var img = zip.folder("images");
+zip.generateAsync({type:"blob"})
+.then(function(content) {
+  // see FileSaver.js
+  saveAs(content, "example.zip");
+});
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

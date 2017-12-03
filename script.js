@@ -17,11 +17,12 @@ let createSlide = function() {
 };
 
 let saveSlide = function() {
+  let bgColor = document.getElementById('bg-color').value;
   let heading = document.getElementById('new-heading').value;
   let content = document.getElementById('new-content').value;
   document.getElementById('slide-form').reset();
   document.getElementById('id01').style.display = 'none';
-  let slide = '<style media="screen">body{}.heading{}.content{}</style><div id=\'main\'><div class=\'center\' id=\'slide\'><p class=\'heading\'>' + heading + '</p><p class=\'content\'>' + content + '</p></div></div>';
+  let slide = '<style media="screen">body{background-color:'+bgColor+'}.heading{}.content{}</style><div id=\'main\'><div class=\'center\' id=\'slide\'><p class=\'heading\'>' + heading + '</p><p class=\'content\'>' + content + '</p></div></div>';
   slides.push(slide);
   slideNumber = slides.length - 1;
   displaySlide();

@@ -27,13 +27,19 @@
 
 
           <label><b>Background Color For Slide:</b></label>
-          <input type="color" placeholder="Enter Heading" id="bg-color" required>
+          <input type="color" placeholder="Enter Heading" id="bg-color">
+          </br>
+
+
+
 
           <label><b>Heading</b></label>
-          <input type="text" placeholder="Enter Heading" id="new-heading" required>
-
+          <input type="text" placeholder="Enter Heading" id="new-heading" >
+          <label><b>Font color:</b></label><input type="color" placeholder="Enter Heading" id="h-color" onchange="document.getElementById('new-heading').style.color=this.value">
+          </br><label><b>Font:</b></label><div id="fonts"></div>
+        </br>
           <label><b>Content</b></label>
-          <input type="text" placeholder="Enter Content" id="new-content" required>
+          <input type="text" placeholder="Enter Content" id="new-content" >
 
           <div class="clearfix">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
@@ -46,5 +52,7 @@
   </body>
   <script type="text/javascript">
     displaySlide();
+    fontChoice=fontSelector('new-heading');
+    fonts.innerHTML=fontChoice+fontSizeSelector('new-heading');
   </script>
 </html>

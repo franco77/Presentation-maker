@@ -18,6 +18,10 @@
          color:white;}/*background designing*/
          body{  background-color:black;}
 
+#all{
+  border: 2px;
+  border-color: steelblue;
+}
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;

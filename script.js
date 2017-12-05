@@ -145,3 +145,11 @@ let fontSizeSelector = function (fontFor) {
 let updateFontSize = function (fontFor,value) {
   document.getElementById(fontFor).style["font-size"] =value+"px";
 }
+
+let showAll = function () {
+  let html = '';
+  for(let index=0;index<slides.length;index++){
+   html +='<div id="all">'+slides[index]+'</div>';
+   }
+   document.getElementById('slides').innerHTML=html;
+}

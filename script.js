@@ -20,10 +20,11 @@ let createSlide = function() {
 
 let saveSlide = function() {
   let bgColor = document.getElementById('bg-color').value;
+  let hColor = document.getElementById('h-color').value;
   let heading = document.getElementById('new-heading').value;
   let content = document.getElementById('new-content').value;
   document.getElementById('id01').style.display = 'none';
-  let slide = '<style media="screen">body{background-color:'+bgColor+'}.heading{}.content{}</style><div id=\'main\'><div class=\'center\' id=\'slide\'><p class=\'heading\'>' + heading + '</p><p class=\'content\'>' + content + '</p></div></div>';
+  let slide = '<style media=\'screen\'>body{background-color:'+bgColor+'}.heading{color:'+hColor+'}.content{}</style><div id=\'main\'><div class=\'center\' id=\'slide\'><p class=\'heading\'>' + heading + '</p><p class=\'content\'>' + content + '</p></div></div>';
   document.getElementById('slide-form').reset();
   slides.push(slide);
   slideNumber = slides.length - 1;
@@ -44,6 +45,7 @@ let download = function() {
   let slidesString = slides.join('qwertyuiopasdfghjkl;');
   let js = 'let slides="' + slidesString + '";\nslides=slides.split("qwertyuiopasdfghjkl;");\nlet slideNumber=0;\n slides.shift();';
   let css = '#main{  margin: auto;  width: 50%;   /*border: 3px solid green;*/  padding: 10px;}/*text formatting*/.center {    margin: auto;    /*width: 50%;*/    padding: 10px;}.heading{  font-size: 7em;  font-family: \'roboto\'sans-serif;  color:white;}.content{  font-size: 2em;  font-family: sans-serif;  color:white;}/*background designing*/body{  background-color:black;} ';
+  console.log(js);
   let html = '<!DOCTYPE html>\
   \n<html>\
   \n<head>\

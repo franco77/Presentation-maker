@@ -151,5 +151,6 @@ let showAll = function () {
   for(let index=0;index<slides.length;index++){
    html +='<div id="all">'+slides[index]+'</div>';
    }
+   console.log(html);
    document.getElementById('slides').innerHTML=html;
 }

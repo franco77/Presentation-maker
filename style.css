@@ -19,8 +19,8 @@
          body{  background-color:black;}
 
 #all{
-  border: 2px;
-  border-color: steelblue;
+  border: 10px;
+  border-color: white;
 }
 input[type=text], input[type=password] {
     width: 100%;
